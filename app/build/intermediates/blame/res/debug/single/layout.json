@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/dianaplesa/Projects/ContactManager/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/Users/dianaplesa/Projects/ContactManager/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/dianaplesa/Projects/ContactManager/app/build/intermediates/res/merged/debug/layout/add_contact.xml",
+        "source": "/Users/dianaplesa/Projects/ContactManager/app/src/main/res/layout/add_contact.xml"
+    },
+    {
+        "merged": "/Users/dianaplesa/Projects/ContactManager/app/build/intermediates/res/merged/debug/layout/edit_contact.xml",
+        "source": "/Users/dianaplesa/Projects/ContactManager/app/src/main/res/layout/edit_contact.xml"
+    },
+    {
+        "merged": "/Users/dianaplesa/Projects/ContactManager/app/build/intermediates/res/merged/debug/layout/view_contact.xml",
+        "source": "/Users/dianaplesa/Projects/ContactManager/app/src/main/res/layout/view_contact.xml"
+    }
+]
