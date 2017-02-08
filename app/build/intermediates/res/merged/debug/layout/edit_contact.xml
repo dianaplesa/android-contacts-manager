@@ -61,7 +61,7 @@
             android:layout_alignBaseline="@+id/button1"
             android:layout_alignBottom="@+id/button1"
             android:layout_centerHorizontal="true"
-            android:onClick="removeAnimal"
+            android:onClick="removeContact"
             android:text="Delete" />
 
     </RelativeLayout>

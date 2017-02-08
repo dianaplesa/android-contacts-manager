@@ -4,48 +4,38 @@
     api-level="23"
     density="420dpi"
     format="7"
-    timestamp="421710581666354"
+    timestamp="843839577754840"
     token="-5555388333907273638"
-    verifier="COMPATIBLE" >
+    verifier="FIELD_ADDED" >
 
     <task
         name="javac"
-        duration="1800" />
+        duration="573" />
     <task
         name="instant-run-dex"
-        duration="1074" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="104" />
+        duration="41" />
     <task
         name="verifier"
-        duration="61" />
+        duration="10" />
 
     <artifact
-        location="/Users/dianaplesa/Projects/ContactManager/app/build/intermediates/reload-dex/debug/classes.dex"
-        type="RELOAD_DEX" />
+        location="/Users/dianaplesa/Projects/ContactManager/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
+        type="DEX" />
 
-    <build timestamp="394297627865880" >
+    <build timestamp="824574630287697" >
         <artifact
             location="/Users/dianaplesa/Projects/ContactManager/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="396687607144881"
-        verifier="METHOD_DELETED" >
-        <artifact
-            location="/Users/dianaplesa/Projects/ContactManager/app/build/intermediates/res/resources-debug.ap_"
-            type="RESOURCES" />
+        timestamp="843839577754840"
+        verifier="FIELD_ADDED" >
         <artifact
             location="/Users/dianaplesa/Projects/ContactManager/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
             type="DEX" />
-    </build>
-    <build
-        timestamp="421710581666354"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/Users/dianaplesa/Projects/ContactManager/app/build/intermediates/reload-dex/debug/classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

@@ -15,7 +15,6 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 public class MainActivity extends ListActivity {
-	Intent intent;
 	DBController databaseController = new DBController(this);
 	private ArrayList<Contact> allContacts;
 	private SimpleAdapter listAdapter;
@@ -31,18 +30,19 @@ public class MainActivity extends ListActivity {
 		
 		allContacts = databaseController.getAllContacts();
 		contactList = new ArrayList<>();
-		getNamesandPhones(allContacts);
+		getNamesAndPhones(allContacts);
 		if (contactList.size() != 0) {
 			list.setOnItemClickListener(new OnItemClickListener() {
 				@Override
 				public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 					int contactID = allContacts.get(position).getId();
 					Intent objIndent = new Intent(getApplicationContext(), ViewContact.class);
-					objIndent.putExtra("contactID", contactID);
+					objIndent.putExtra(Constants.CONTACT_ID, contactID);
 					startActivity(objIndent);
 				}
 			});
-			listAdapter = new SimpleAdapter(MainActivity.this, contactList, android.R.layout.simple_list_item_2, new String[] { "name", "phone" }, new int[] { android.R.id.text1, android.R.id.text2 });
+			listAdapter = new SimpleAdapter(MainActivity.this, contactList, android.R.layout.simple_list_item_2,
+							new String[] { Constants.NAME, Constants.PHONE }, new int[] { android.R.id.text1, android.R.id.text2 });
 			setListAdapter(listAdapter);
 		}
 		
@@ -50,7 +50,7 @@ public class MainActivity extends ListActivity {
             public void run(){
             	contactList.clear();
             	allContacts = databaseController.getAllContacts();
-            	getNamesandPhones(allContacts);
+            	getNamesAndPhones(allContacts);
             	System.out.println(contactList);
         		listAdapter.notifyDataSetChanged(); 
         		list.invalidateViews();
@@ -65,15 +65,15 @@ public class MainActivity extends ListActivity {
 		startActivity(objIntent);
 	}
 
-	private void getNamesandPhones(ArrayList<Contact> contacts) {
+	private void getNamesAndPhones(ArrayList<Contact> contacts) {
 		
 		HashMap<String, String> item;
 		for (Contact c : contacts) {
 			item = new HashMap<>();
 			String name = c.getFirstName() + " " + c.getLastName();
 			String phone = c.getPhoneNumber();
-			item.put("name", name);
-			item.put("phone", phone);
+			item.put(Constants.NAME, name);
+			item.put(Constants.PHONE, phone);
 			contactList.add(item);
 		}
 	}

@@ -30,7 +30,7 @@ public class ViewContact extends Activity {
 		setContentView(R.layout.view_contact);
 
 		Intent objIntent = getIntent();
-		contactID = objIntent.getIntExtra("contactID", 0);
+		contactID = objIntent.getIntExtra(Constants.CONTACT_ID, Constants.INTENT_CONTACT_ID);
 		Contact c = databaseController.getContact(contactID);
 
 		firstName = (EditText) findViewById(R.id.firstName);
@@ -94,7 +94,7 @@ public class ViewContact extends Activity {
 					break;
 				case "Save":
 					saveContact();
-					Toast.makeText(getApplicationContext(), "Contact saved successfully!", Toast.LENGTH_SHORT).show();
+					Toast.makeText(getApplicationContext(), Constants.SAVED_CONTACT, Toast.LENGTH_SHORT).show();
 					finish();
 					break;
 				default:
@@ -110,7 +110,7 @@ public class ViewContact extends Activity {
 			@Override
 			public void onClick(View v) {
 				databaseController.deleteContact(contactID);
-				Toast.makeText(getApplicationContext(), "Contact deleted successfully!", Toast.LENGTH_SHORT).show();
+				Toast.makeText(getApplicationContext(), Constants.DELETED_CONTACT, Toast.LENGTH_SHORT).show();
 				finish();
 			}
 		});

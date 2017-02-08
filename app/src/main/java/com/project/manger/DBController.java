@@ -41,12 +41,12 @@ public class DBController extends SQLiteOpenHelper {
 	public void insertContact(Contact contact) {
 		SQLiteDatabase database = this.getWritableDatabase();
 		ContentValues values = new ContentValues();
-		values.put("firstName", contact.getFirstName());
-		values.put("lastName", contact.getLastName());
-		values.put("phone", contact.getPhoneNumber());
-		values.put("address", contact.getAddress());
-		values.put("email", contact.getEmail());
-		database.insert("contacts", null, values);
+		values.put(Constants.FIRST_NAME, contact.getFirstName());
+		values.put(Constants.LAST_NAME, contact.getLastName());
+		values.put(Constants.PHONE, contact.getPhoneNumber());
+		values.put(Constants.ADDRESS, contact.getAddress());
+		values.put(Constants.EMAIL, contact.getEmail());
+		database.insert(Constants.CONTACTS, null, values);
 		database.close();
 	}
 
@@ -59,12 +59,12 @@ public class DBController extends SQLiteOpenHelper {
 	public int updateContact(Contact contact) {
 		SQLiteDatabase database = this.getWritableDatabase();
 		ContentValues values = new ContentValues();
-		values.put("firstName", contact.getFirstName());
-		values.put("lastName", contact.getLastName());
-		values.put("phone", contact.getPhoneNumber());
-		values.put("address", contact.getAddress());
-		values.put("email", contact.getEmail());
-		return database.update("contacts", values, "ID" + " = ?", new String[] { Integer.toString(contact.getId()) });
+		values.put(Constants.FIRST_NAME, contact.getFirstName());
+		values.put(Constants.LAST_NAME, contact.getLastName());
+		values.put(Constants.PHONE, contact.getPhoneNumber());
+		values.put(Constants.ADDRESS, contact.getAddress());
+		values.put(Constants.EMAIL, contact.getEmail());
+		return database.update(Constants.CONTACTS, values, "ID" + " = ?", new String[] { Integer.toString(contact.getId()) });
 
 	}
 
@@ -120,7 +120,6 @@ public class DBController extends SQLiteOpenHelper {
 		Cursor cursor = database.rawQuery(selectQuery, null);
 		if (cursor.moveToFirst()) {
 			do {
-	
 				c.setId(cursor.getInt(0));
 				c.setFirstName(cursor.getString(1));
 				c.setLastName(cursor.getString(2));

@@ -1,3 +1,0 @@
-CHANGED,/Users/dianaplesa/Projects/ContactManager/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/project/manger/ViewContact$5.class
-CHANGED,/Users/dianaplesa/Projects/ContactManager/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/project/manger/ViewContact$4.class
-CHANGED,/Users/dianaplesa/Projects/ContactManager/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/project/manger/ViewContact.class

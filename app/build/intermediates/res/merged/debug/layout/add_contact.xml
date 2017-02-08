@@ -11,7 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#000000"
-        android:padding="5dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="8dp"
+        android:paddingLeft="20dp"
         android:text="Add Contact"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#FFFFFF" />
@@ -82,7 +84,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="61dp"
             android:onClick="saveContact"
-            android:text="Save" />
+            android:text="Save"
+            android:background="@drawable/button_custom" />
     </RelativeLayout>
 
 </LinearLayout>

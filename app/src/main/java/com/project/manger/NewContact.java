@@ -37,7 +37,7 @@ public class NewContact extends Activity {
 		c.setAddress(address.getText().toString());
 
 		databaseController.insertContact(c);
-		Toast.makeText(getApplicationContext(), "Contact added successfully!", Toast.LENGTH_SHORT).show();
+		Toast.makeText(getApplicationContext(), Constants.ADDED_CONTACT, Toast.LENGTH_SHORT).show();
 		this.finish();
 	}
 }

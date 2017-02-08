@@ -4,14 +4,16 @@
     android:layout_height="match_parent"
     android:background="#CCCCCC"
     android:orientation="vertical"
-    android:paddingTop="1dp" >
+    android:paddingTop="1dp">
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#000000"
-        android:padding="5dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="8dp"
+        android:paddingLeft="20dp"
         android:text="View Contact"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#FFFFFF" />
@@ -134,7 +136,10 @@
             android:layout_alignBottom="@+id/editContact"
             android:layout_alignRight="@+id/address"
             android:layout_marginRight="70dp"
-            android:text="Remove" />
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="Remove"
+            android:background="@drawable/button_custom" />
 
         <Button
             android:id="@+id/editContact"
@@ -143,7 +148,8 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="46dp"
             android:layout_toLeftOf="@+id/address"
-            android:text="Edit" />
+            android:text="Edit"
+            android:background="@drawable/button_custom" />
 
     </RelativeLayout>
 
